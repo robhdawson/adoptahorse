@@ -22,6 +22,14 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.get('/', function(request, response) {
+    response.sendFile(__dirname + '/index.html');
+});
+
+app.get('/horse', function(request, response) {
+    response.send(makeHorse());
+});
+
 
 app.get('/horses', function(request, response) {
 

@@ -1,0 +1,102 @@
+<head>
+    <title>adopt a horse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .main {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .code {
+            background: #f1f1f1;
+            padding: 8px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="main">
+    <h1>adopt a horse</h1>
+
+    <p>
+        A little API that will give you some horses.
+    </p>
+
+    <p>
+        This request:
+    </p>
+
+    <div class="code">
+    GET https://adoptahorse.herokuapp.com/horse
+    </div>
+
+    <p>
+        Gives you something like:
+    </p>
+
+    <div class="code">
+    {
+        "name": "Gorg",
+        "mood": "cool",
+        "talents": [
+            "contact juggling",
+            "penmanship",
+            "always gets the coke/pepsi taste test wrong"
+        ],
+        "id": "49740303261205554"
+    }
+    </div>
+
+    <p>
+        You can also request multiple horses, like this:
+    </p>
+
+    <div class="code">
+    GET https://adoptahorse.herokuapp.com/horses?n=2
+    </div>
+
+    <p>
+        They come back in an array like this:
+    </p>
+
+    <div class="code">
+    [
+        {
+            "name": "Endless Screaming",
+            "mood": "real sad",
+            "talents": [
+                "mapmakery"
+            ],
+            "id": "17178360698744655"
+        },
+        {
+            "name": "Big Boy",
+            "mood": "sedated",
+            "talents": [
+                "mapmakery",
+                "knows the whole alphabet"
+            ],
+            "id": "015191152226179838"
+        },
+        {
+            "name": "Grunk",
+            "mood": "revved up",
+            "talents": [
+                "speechifying",
+                "karate"
+            ],
+            "id": "4518112021032721"
+        }
+    ]
+    </div>
+
+    <p>
+        CORS is enabled, so fetch these beauties from anywhere you want.
+    </p>
+</div>
+</body>
