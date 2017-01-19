@@ -10,7 +10,7 @@ function makeHorse() {
         name: _.sample(data.names),
         mood: _.sample(data.moods),
         talents: _.shuffle(data.talents).slice(0, _.sample([1,2,2,2,2,3])),
-        id: (new Date()).getTime(),
+        id: (Math.random() + '').slice(2),
     };
 }
 
@@ -37,4 +37,4 @@ app.get('/horses', function(request, response) {
 
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3001);
