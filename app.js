@@ -10,6 +10,7 @@ function makeHorse() {
         name: _.sample(data.names),
         mood: _.sample(data.moods),
         talents: _.shuffle(data.talents).slice(0, _.sample([1,2,2,2,2,3])),
+        id: (new Date()).getTime(),
     };
 }
 
